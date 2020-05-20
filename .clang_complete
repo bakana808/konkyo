@@ -1,0 +1,7 @@
+-U__STRICT_ANSI__
+-Wall
+-std=c++1z
+-DDEBUG
+-DSFML_STATIC
+-Iinclude
+-isystemD:/libs/sfml_2.5.1/include
