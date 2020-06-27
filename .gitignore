@@ -1,0 +1,7 @@
+
+.ccls-cache/
+.clangd/
+.deps/
+.vscode/
+obj/
+obj/*

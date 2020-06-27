@@ -28,16 +28,13 @@ void Timer::on_tick(const float& delta) {
 
 	if(alpha < 0.5) {
 		
-		bar->setPosition(game::lerp(start, end, pow(alpha*2, 2)));
+		bar->setPosition(game::lerp(start, end, pow(alpha*2, 1)));
 	}
 	else {
 		
-		bar->setPosition(game::lerp(end, start, pow((alpha-0.5)*2, 2)));
+		bar->setPosition(game::lerp(end, start, pow((alpha-0.5)*2, 1)));
 	}
 
-
-	tick++;
-
-	if(tick > ROUND_TICKS) tick = 0;
+	tick = (tick + 1) % ROUND_TICKS;
 }
 

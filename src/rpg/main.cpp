@@ -1,7 +1,6 @@
 
 #include "rpg/rpg.h"
 
-
 int main() {
 	
 	RPGGame game;

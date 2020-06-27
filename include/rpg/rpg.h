@@ -8,6 +8,7 @@
 #include <deque>
 
 class Character;
+class Enemy;
 
 class RPGGame: public Game {
 private:
@@ -22,9 +23,13 @@ private:
 
     sf::Text *text_info, *text_legend, *text_status;
 
+	Enemy *enemy1, *enemy2, *enemy3;
+
 public:
 
 	Camera cam_scene, cam_hud;
+
+	RPGGame();
 
 	void push_console_message(string msg);
 
@@ -39,5 +44,7 @@ public:
     void on_tick(const float& delta);
 
 	void attack_enemy(int n);
+
+	sf::Font& get_font() { return font; }
 };
 

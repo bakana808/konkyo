@@ -98,4 +98,6 @@ public:
     virtual void key_hold(Key key) {}
 
 	void set_tickrate(float tickrate) { this->tickrate = 1/tickrate; }
+
+	const float& get_tickrate() { return this->tickrate; }
 };

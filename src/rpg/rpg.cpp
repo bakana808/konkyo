@@ -2,6 +2,9 @@
 #include "rpg/rpg.h"
 #include "rpg/timer.h"
 #include "rpg/character.h"
+#include "rpg/enemy.h"
+
+RPGGame::RPGGame(): cam_scene(), cam_hud() {}
 
 void RPGGame::on_run() {
 	
@@ -16,6 +19,15 @@ void RPGGame::on_run() {
 	text_legend->setFont(font);
 	text_legend->setCharacterSize(14);
 	text_legend->setPosition(-300, 100);
+
+	enemy1 = em_scene.spawn_entity<Enemy>(this);
+	enemy1->set_pos({300, -50});
+
+	enemy2 = em_scene.spawn_entity<Enemy>(this);
+	enemy2->set_pos({300, 0});
+
+	enemy3 = em_scene.spawn_entity<Enemy>(this);
+	enemy3->set_pos({300, 50});
 
 	ch = em_scene.spawn_entity<Character>(this);
 
@@ -49,6 +61,8 @@ void RPGGame::push_console_message(string msg) {
 	if(con_log.size() > 16) {
 		con_log.pop_front();
 	}
+
+	PRINT("[CON] " << msg);
 }
 
 string RPGGame::get_console_string() {
@@ -106,6 +120,23 @@ void RPGGame::on_render(sf::RenderWindow* window) {
 
 void RPGGame::attack_enemy(int n) {
 	
+	Enemy *e;
+
+	if(n == 0) {
+		e = enemy1;
+	}
+	else if(n == 1) {
+		e = enemy2;
+	}
+	else {
+		e = enemy3;
+	}
+
+	e->hurt(50);
+	if(e->get_health() <= 0)
+		cam_hud.shake(60, 100);
+	else
+		cam_hud.shake(10, 10);
+
 	push_console_message("You are attacking enemy " + STR(n));
-	cam_hud.shake(10, 10);
 }

@@ -1,6 +1,5 @@
 
 #include "block.h"
-#include "test.h"
 #include <math.h>
 
 
@@ -53,7 +52,7 @@ void Box::on_tick(const float& delta) {
 
 	if(slide_frames > 0) slide_frames--;
 
-	if(slide_frames == 1) game->cam.shake(6, 8);
+	//if(slide_frames == 1) game->cam.shake(6, 8);
 }
 
 
