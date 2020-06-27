@@ -179,7 +179,7 @@ else
 
 	# execute
 	RUN.c = \
-		$(eval POST ?= $(firstword $(TARGETS))) \
+		$(eval POST ?= $(BINDIR)/$(firstword $(TARGET_NAMES))) \
 		$(POST)
 
 	# execute & debug
@@ -187,9 +187,9 @@ else
 
 	# create missing folders
 	MKDIR.c      = @mkdir -p $(@D)
-	MKDIR_OBJS.c = @mkdir -p $(OBJDIR)
-	MKDIR_DEPS.c = @mkdir -p $(DEPDIR)
-	MKDIR_BINS.c = @mkdir -p $(BINDIR)
+	MKDIR_OBJS.c = @mkdir -p $(@D)
+	MKDIR_DEPS.c = @mkdir -p $(subst $(OBJDIR), $(DEPDIR), $(@D))
+	MKDIR_BINS.c = @mkdir -p $(subst $(OBJDIR), $(BINDIR), $(@D))
 
 	# clean
 	CLEAN.c = rm -rf $(OBJDIR)/*; rm -rf $(BINDIR)/*; rm -f $(OUTFILE); rm -rf $(DEPDIR)/*
@@ -237,6 +237,7 @@ info :
 	@echo =====================================================================
 	@echo COMPILING INFO:
 	@echo =====================================================================
+	@echo targets: $(TARGET_NAMES)
 	@echo additional flags: $(FLAGS)
 	@echo working dir: $(CD)
 	@echo src dir: $(SRCDIR)/
