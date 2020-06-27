@@ -24,7 +24,7 @@ public:
 
 	Character(RPGGame *game);
 
-	void key_press(Key key) override;
+	void on_key_press(Key key) override;
 
 	void end_turn();
 

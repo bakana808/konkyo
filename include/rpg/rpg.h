@@ -37,7 +37,7 @@ public:
 
     void on_run();
 
-    void key_press(Key key);
+    void on_key_press(Key key);
 
     void on_render(sf::RenderWindow* window);
 

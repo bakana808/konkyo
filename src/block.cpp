@@ -3,7 +3,7 @@
 #include <math.h>
 
 
-void Box::key_press(Key key) {
+void Box::on_key_press(Key key) {
 	
 	switch(key) {
 	case Key::D:

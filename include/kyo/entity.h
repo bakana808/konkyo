@@ -15,6 +15,10 @@ public:
      */
     virtual void draw(sf::RenderTarget&, sf::RenderStates) const = 0;
 
+	virtual void on_draw(sf::RenderTarget& target, sf::RenderStates states) const {
+		this->draw(target, states);
+	}
+
     /**
      * @brief Process a time step for this entity.
      *
@@ -46,6 +50,8 @@ private:
 
 public:
 
+	// by default, try using the name of the class (in source)
+	// as the entity name
     Entity(): name(game::demangle(typeid(this).name())) {}
 
     /**

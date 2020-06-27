@@ -10,7 +10,7 @@ void Character::end_turn() {
 	state = MAIN;
 }
 
-void Character::key_press(Key key) {
+void Character::on_key_press(Key key) {
 	
 	switch(state) {
 

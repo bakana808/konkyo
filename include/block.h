@@ -25,7 +25,7 @@ public:
 		prev_pos = get_pos();
     }
 
-	void key_press(Key key);
+	void on_key_press(Key key);
 
     void on_tick(const float& delta) override;
 

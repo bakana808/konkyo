@@ -91,11 +91,11 @@ public:
 
     virtual void on_render(sf::RenderWindow* window) {}
 
-    virtual void key_press(Key key) {}
+    virtual void on_key_press(Key key) {}
 
-    virtual void key_release(Key key) {}
+    virtual void on_key_release(Key key) {}
 
-    virtual void key_hold(Key key) {}
+    virtual void on_key_hold(Key key) {}
 
 	void set_tickrate(float tickrate) { this->tickrate = 1/tickrate; }
 

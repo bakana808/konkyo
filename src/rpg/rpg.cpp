@@ -36,7 +36,7 @@ void RPGGame::on_run() {
 	this->set_tickrate(60);
 }
 
-void RPGGame::key_press(Key key) {
+void RPGGame::on_key_press(Key key) {
 	
 	switch(key) {
 	case Key::Escape:
@@ -51,7 +51,7 @@ void RPGGame::key_press(Key key) {
 	default: break;
 	}
 
-	ch->key_press(key);
+	ch->on_key_press(key);
 }
 
 void RPGGame::push_console_message(string msg) {

@@ -54,10 +54,10 @@ void Game::processEvents() {
             close(); break;
 
         case sf::Event::KeyPressed:
-            this->key_press(event.key.code); break;
+            this->on_key_press(event.key.code); break;
 
         case sf::Event::KeyReleased:
-            this->key_release(event.key.code); break;
+            this->on_key_release(event.key.code); break;
         }
     }
 }

@@ -1,9 +1,8 @@
 
-Konkyo
-======
+<h1><center>Konkyo</center></h1>
+<center>A 2D Game Engine</center>
 
-A 2D Game Engine
-
+* * *
 
 # Quickstart
 
