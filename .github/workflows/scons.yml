@@ -1,0 +1,10 @@
+name: scons
+on: [push]
+jobs:
+  scons-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - run: pip install scons
+      - run: scons
