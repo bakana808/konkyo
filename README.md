@@ -2,7 +2,7 @@
 Test Game / Konkyo
 ===================
 
-![C/C++ CI](https://github.com/bakana808/konkyo/workflows/C/C++%20CI/badge.svg)
+[![scons](https://github.com/bakana808/konkyo/actions/workflows/scons.yml/badge.svg)](https://github.com/bakana808/konkyo/actions/workflows/scons.yml)
 
 This project contains both a WIP game framework (nicknamed Konkyo), and a runnable test game application using the framework.
 
