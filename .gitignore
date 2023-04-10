@@ -1,7 +1,4 @@
-
-.ccls-cache/
-.clangd/
-.deps/
 .vscode/
-obj/
-obj/*
+build/
+compile_commands.json
+.sconsign.dblite

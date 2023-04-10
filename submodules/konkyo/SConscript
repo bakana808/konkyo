@@ -1,0 +1,12 @@
+Import("env")
+
+kyo_env = env.Clone(CPPPATH="include")
+kyo = kyo_env.Library(
+    "kyo",
+    Glob("*.cpp")
+    + Glob("src/kyo/*.cpp")
+    + ["src/kyo/entity/composite.cpp"]
+    + ["src/kyo/vector/vec2.cpp"],
+)
+
+Return("kyo")

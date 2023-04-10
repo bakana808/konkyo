@@ -1,6 +1,6 @@
 
 <h1><center>Konkyo</center></h1>
-<center>A 2D Game Engine</center>
+<center>A 2D Game Framework</center>
 
 * * *
 
@@ -37,9 +37,9 @@ public:
 	// (needed when framerate > tickrate)
 	void on_lerp(float t) override { /* ... */ }
 };
-
 ```
 
+## 
 ## Entities
 
 An _entity_ is an object that can be drawn.

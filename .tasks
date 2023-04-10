@@ -1,5 +1,0 @@
-
-[run]
-command=DISPLAY=:0 make run
-cwd=.
-output=terminal

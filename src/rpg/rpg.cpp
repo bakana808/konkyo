@@ -111,10 +111,10 @@ void RPGGame::on_render(sf::RenderWindow* window) {
 	
 	window->clear();
 
-	cam_scene.arm(*window);
+	this->set_view(cam_scene);
 	window->draw(em_scene);
 
-	cam_hud.arm(*window);
+	this->set_view(cam_hud);
 	window->draw(em_hud);
 }
 

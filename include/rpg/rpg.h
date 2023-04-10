@@ -4,7 +4,7 @@
 #include "kyo/common.h"
 #include "kyo/entity/manager.h"
 #include "kyo/game.h"
-#include "camera.h"
+#include "kyo/camera.h"
 #include <deque>
 
 class Character;
